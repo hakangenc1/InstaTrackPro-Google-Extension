@@ -1,0 +1,41 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 450px;
+    min-height: 600px;
+    overflow-x: hidden;
+    @apply bg-slate-950 text-slate-200 antialiased font-['Inter'];
+  }
+  
+  #root {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+.glass {
+  @apply bg-slate-900/40 backdrop-blur-md border border-slate-800/50;
+}
+
+.instagram-gradient-text {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
